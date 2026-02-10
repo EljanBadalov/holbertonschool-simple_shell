@@ -1,58 +1,40 @@
+# Basic Shell
+![GIF](https://github.com/EljanBadalov/holbertonschool-simple_shell/blob/main/img/coding.gif)
 
-# Simple Shell At Holberton School
+## Overview
+Basic Shell is a simple, interactive command line interpreter that provides a user interface to access the operating system's services. It is designed to execute commands and manage your files and processes.
 
-command-line interpreter that lets Linux and Unix users control their operating systems with command-line interfaces(simpler version)
+## Features
+- **Command Execution:** Execute standard UNIX commands alongside some custom built-ins.
+- **File Navigation:** Easily navigate through directories and manage files.
+- **Process Management:** Oversee and control the execution of processes.
+- **Script Execution:** Run simple shell scripts to automate tasks.
 
+## Usage
 
-## Usage/Examples
-
-```
-$ mkdir Hello
-```
-```
-$ ls /bin
-```
-
-```
-$ clear
-```
-```
-$ pwd
-```
-```
-$ env
-```
-```
-$ exit
-```
-
-## Installation
-
-Install holbertonschool-simple_shell with git clone
-
+1.Compile the code:
 ```bash
-git clone https://github.com/EljanBadalov/holbertonschool-simple_shell.git
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o MyShell
 ```
 
-
-## Run
-
-Go to the project directory
-
+2.Run the compiled shell:
 ```bash
-  cd holbertonschool-simple_shell
+./MyShell
 ```
 
-compile the program with gcc
+## Custom Commands
 
-```bash
-  gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-```
-Run the program
+Basic Shell supports the following custom commands:
 
-```bash
-  ./hsh
-```
+- `exit`: The command causes the shell or program to terminate. If performed within an interactive command shell, the user is logged out of their current session, and/or user's current console or terminal connection is disconnected. Typically an optional exit code can be specified, which is typically a simple integer value that is then returned to the parent process.
+- `env`: The env command allows you to display your current environment or run a specified command in a changed environment.
 
+## Contributing
 
+Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
+1. Fork the Project
+1. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+1. Commit your Changes (git commit -m 'Add some AmazingFeature')
+1. Push to the Branch (git push origin feature/AmazingFeature)
+1. Open a Pull Request
