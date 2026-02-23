@@ -5,8 +5,10 @@
  */
 #include "main.h"
 /**
- * print_prompt - prints prompt string
- * @status: 1 if fd is an open file descriptor referring to a terminal
+ * print_prompt - prints the shell prompt
+ * @status: 1 if shell is interactive
+ *
+ * Return: nothing
  */
 void print_prompt(int status)
 {
