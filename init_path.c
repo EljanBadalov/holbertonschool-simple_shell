@@ -36,10 +36,11 @@ void find_path(char **var, int *i, int *j)
 	*j = 0;
 }
 /**
-  * get_path - init path array
-  * @env: environment variables array pointer
-  * Return: path array
-  */
+ * get_path - initializes an array of directories from PATH
+ * @env: environment variables array
+ *
+ * Return: pointer to array of PATH directories, or NULL on failure
+ */
 char **get_path(char **env)
 {
 	int i = 0, j = 0;
@@ -60,7 +61,9 @@ char **get_path(char **env)
 	return (array);
 }
 /**
- * free_path - free path buffer
+ * free_path - frees the global PATH directories array
+ *
+ * Return: nothing
  */
 void free_path(void)
 {
