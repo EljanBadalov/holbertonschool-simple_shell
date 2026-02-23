@@ -1,9 +1,15 @@
+/**
+ * File: exec_comm.c
+ * Auth: Eljan Badalov
+ * Desc: Executes a command using fork and execve
+ */
 #include "main.h"
 /**
-  * exec_c - execute user input
-  * @fcommand: user input
-  * Return: executed commands return code
-  */
+ * exec_c - executes a command provided by the user
+ * @fcommand: NULL-terminated array of command arguments
+ *
+ * Return: exit status code of the executed command, or 1 on failure
+ */
 int exec_c(char **fcommand)
 {
 	pid_t pid;
