@@ -1,12 +1,19 @@
+/**
+ * File: init_path.c
+ * Auth: Eljan Badalov
+ * Desc: Initializes and frees the PATH variable array for the shell
+ */
 #include "main.h"
 char **path_var = NULL;
 
 /**
-  * find_path - find path in env variables
-  * @var: env variable
-  * @i: row index
-  * @j: column index
-  */
+ * find_path - finds the PATH entry in the environment variables
+ * @var: environment variables array
+ * @i: row index (updated by function)
+ * @j: column index (updated by function)
+ *
+ * Return: nothing
+ */
 void find_path(char **var, int *i, int *j)
 {
 	while (var[*i])
