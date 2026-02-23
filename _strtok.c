@@ -1,10 +1,16 @@
+/**
+ * File: _strtok.c
+ * Auth: Eljan Badalov
+ * Desc: Splits a string into tokens using a single character delimiter
+ */
 #include "main.h"
 /**
-  * _strtok - my strtok implementation
-  * @str: string for tokenization
-  * @delim: delimiter
-  * Return: array of tokens
-  */
+ * _strtok - splits a string into tokens using a delimiter
+ * @str: string to tokenize
+ * @delim: delimiter character
+ *
+ * Return: NULL-terminated array of tokens, or NULL on failure
+ */
 char **_strtok(char *str, char delim)
 {
 	char **array, *start, *end;
