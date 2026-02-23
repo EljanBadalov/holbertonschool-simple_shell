@@ -1,11 +1,17 @@
+/**
+ * File: getcommand.c
+ * Auth: Eljan Badalov
+ * Desc: Reads user input and splits it into command arguments
+ */
 #include <errno.h>
 #include "main.h"
 /**
-  * arg_counter - counts number of arguments
-  * @buf: user input
-  * @size: size of user input
-  * Return: number of argumnets
-  */
+ * arg_counter - counts the number of arguments in the input buffer
+ * @buf: user input buffer
+ * @size: size of user input
+ *
+ * Return: number of arguments found
+ */
 int arg_counter(char *buf, int size)
 {
 	int count = 0, i;
@@ -18,10 +24,11 @@ int arg_counter(char *buf, int size)
 	return (count);
 }
 /**
-  * get_command - format command line arguments
-  * @buf: buffer for storing user input
-  * Return: memory address where arguments are stored
-  */
+ * get_command - reads a line from stdin and formats it into arguments
+ * @buf: address of a buffer that stores the user input
+ *
+ * Return: pointer to an array of argument strings, or NULL on failure/EOF
+ */
 char **get_command(char **buf)
 {
 	char **array;
