@@ -1,3 +1,8 @@
+/**
+ * File: prompt_string.c
+ * Auth: Eljan Badalov
+ * Desc: Prints the shell prompt if interactive
+ */
 #include "main.h"
 /**
  * print_prompt - prints prompt string
