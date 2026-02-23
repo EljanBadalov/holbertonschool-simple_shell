@@ -1,10 +1,17 @@
+/**
+ * File: find_file.c
+ * Auth: Eljan Badalov
+ * Desc: Finds the full path of a command using PATH directories
+ */
 #include "main.h"
 /**
-  * find_file - finds file location in path variables
-  * @command: user input
-  * @lk: is the flag for is this command use path or not
-  * Return: modified user input
-  */
+ * find_file - finds a command location in PATH directories
+ * @command: user input command
+ * @lk: set to 1 if returned command was built using PATH (needs free)
+ *
+ * Return: command itself if absolute/relative exists, a newly allocated
+ * string if found via PATH, or NULL if not found
+ */
 char *find_file(char *command, int *lk)
 {
 	int i = 0, len;
