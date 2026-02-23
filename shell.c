@@ -1,11 +1,17 @@
+/**
+ * File: shell.c
+ * Auth: Eljan Badalov
+ * Desc: Main loop for the simple shell program
+ */
 #include "main.h"
 /**
-  * main_helper - helper function for main
-  * @fcommand: tokenaized user command
-  * @status: status about echo
-  * @buf: user input
-  * Return: if break needed 1 else 0
-  */
+ * main_helper - helper function for main
+ * @fcommand: tokenized user command
+ * @status: whether shell is interactive
+ * @buf: user input buffer
+ *
+ * Return: 1 if break needed, otherwise 0
+ */
 int main_helper(char **fcommand, int status, char *buf)
 {
 	if (fcommand == NULL)
@@ -23,12 +29,13 @@ int main_helper(char **fcommand, int status, char *buf)
 	return (0);
 }
 /**
-  * main - shell start function
-  * @argv: argument variables
-  * @argc: argument count
-  * @env: env variables
-  * Return: always 0
-  */
+ * main - Starts the simple shell
+ * @argc: argument count
+ * @argv: argument vector
+ * @env: environment variables
+ *
+ * Return: exit status of the last executed command
+ */
 int main(int argc, char **argv, char **env)
 {
 	char **fcommand, *buf, *command;
